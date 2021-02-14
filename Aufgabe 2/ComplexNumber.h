@@ -10,6 +10,14 @@ private:
 public:
 	ComplexNumbers(char inputType, float valueA, float valueB);
 
+	float calculateAbsoluteAmountWithCoord(float real, float imag);
+
+	float calculateAngleWithCoord(float real, float imag);
+
+	float calculateImagWithPolar(float absoluteAmount, float angle);
+
+	float calculateRealWithPolar(float absoluteAmount, float angle);
+
 	void setMImag(float imag) {
 		this->m_imag = imag;
 	}
