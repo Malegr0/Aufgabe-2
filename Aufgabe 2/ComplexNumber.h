@@ -25,5 +25,20 @@ public:
 	void setMAngle(float angle) {
 		this->m_angle = angle;
 	}
+	
+	float mImag() {
+		return m_imag;
+	}
 
+	float mReal() {
+		return m_imag;
+	}
+
+	float mAbsoluteAmount() {
+		return m_absoluteAmount;
+	}
+
+	float mAngle() {
+		return m_angle;
+	}
 };
