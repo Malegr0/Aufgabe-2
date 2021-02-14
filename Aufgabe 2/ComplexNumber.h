@@ -4,7 +4,7 @@ class ComplexNumbers {
 private:
 	float m_imag;
 	float m_real;
-	float m_absolute_amount;
+	float m_absoluteAmount;
 	float m_angle;
 
 public:
@@ -19,7 +19,7 @@ public:
 	}
 
 	void setMAbsoluteAmount(float absoluteAmount) {
-		this->m_absolute_amount = absoluteAmount;
+		this->m_absoluteAmount = absoluteAmount;
 	}
 
 	void setMAngle(float angle) {
