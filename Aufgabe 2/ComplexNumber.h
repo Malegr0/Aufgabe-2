@@ -12,7 +12,7 @@ public:
 
 	float calculateAbsoluteAmountWithCoord(float real, float imag);
 
-	float calculateAngleWithCoord(float real, float imag);
+	float calculateAngleWithCoord(float real, float imag, float absoluteAmount);
 
 	float calculateImagWithPolar(float absoluteAmount, float angle);
 
