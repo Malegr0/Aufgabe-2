@@ -2,7 +2,7 @@
 
 class ComplexNumber {
 private:
-	char initialInputType;	//has to be 'c' or 'p' for coord or polar
+	char initialInputType;	//has to be 'c' or 'p' for coord/cartesian or polar
 	float valueA;	//if type is coord then this value stands for real, if type is polar then this value stands for absoluteValue
 	float valueB;	//if type is coord then this value stands for imag, if type is polar then this value stands for angle
 

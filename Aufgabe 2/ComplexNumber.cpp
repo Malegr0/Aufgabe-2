@@ -31,9 +31,19 @@ float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) {
 }
 
 std::string ComplexNumber::toCartesianString() {
-	
+	if (this->initialInputType == 'c') {
+		//if already in cartesian form then just output both variables
+	}
+	else {
+		//if not in cartesian form then calculate values for output
+	}
 }
 
 std::string ComplexNumber::toPolarString() {
-
+	if (this->initialInputType == 'p') {
+		//if already in polar form then just output both variables
+	}
+	else {
+		//if not in polar form then calculate values for output
+	}
 }
