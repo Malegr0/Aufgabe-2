@@ -5,11 +5,6 @@
 #include <string>
 #include "ComplexNumber.h"
 
-ComplexNumber::ComplexNumber(char inputType, float valueA, float valueB) {
-	this->initialInputType = inputType;
-	this->valueA = valueA;
-	this->valueB = valueB;
-}
 
 float ComplexNumber::calculateAbsoluteAmountWithCart(float real, float imag) {
 	return std::sqrt(real * real + imag * imag);
@@ -32,23 +27,23 @@ float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) {
 }
 
 std::string ComplexNumber::toCartesianString() {
-	if (initialInputType == 'c') {
+	if (m_initialInputType == 'c') {
 		//if already in cartesian form then just output both variables
-		return "z = " + std::to_string(valueA) + " + " + std::to_string(valueB) + "i";
+		return "z = " + std::to_string(m_valueA) + " + " + std::to_string(m_valueB) + "i";
 	}
 	else {
 		//if not in cartesian form then calculate values for output
-		return "z = " + std::to_string(calculateRealWithPolar(valueA, valueB)) + " + " + std::to_string(calculateImagWithPolar(valueA, valueB)) + "i";
+		return "z = " + std::to_string(calculateRealWithPolar(m_valueA, m_valueB)) + " + " + std::to_string(calculateImagWithPolar(m_valueA, m_valueB)) + "i";
 	}
 }
 
 std::string ComplexNumber::toPolarString() {
-	if (initialInputType == 'p') {
+	if (m_initialInputType == 'p') {
 		//if already in polar form then just output both variables
-		return "z = " + std::to_string(valueA) + " *e^( " + std::to_string(valueB) + "i)";
+		return "z = " + std::to_string(m_valueA) + " *e^( " + std::to_string(m_valueB) + "i)";
 	}
 	else {
 		//if not in polar form then calculate values for output
-		return "z = " + std::to_string(calculateAbsoluteAmountWithCart(valueA, valueB)) + " * e^( " + std::to_string(calculateAngleWithCart(valueA, valueB, calculateAbsoluteAmountWithCart(valueA, valueB))) + "i)";
+		return "z = " + std::to_string(calculateAbsoluteAmountWithCart(m_valueA, m_valueB)) + " * e^( " + std::to_string(calculateAngleWithCart(m_valueA, m_valueB, calculateAbsoluteAmountWithCart(m_valueA, m_valueB))) + "i)";
 	}
 }
