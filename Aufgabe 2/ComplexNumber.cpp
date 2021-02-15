@@ -20,11 +20,11 @@ float ComplexNumber::calculateAngleWithCart(float real, float imag, float absolu
 }
 
 float ComplexNumber::calculateImagWithPolar(float absoluteAmount, float angle) const {
-	return absoluteAmount * std::cos(angle);
+	return absoluteAmount * std::sin(angle);
 }
 
 float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) const {
-	return absoluteAmount * std::sin(angle);
+	return absoluteAmount * std::cos(angle);
 }
 
 std::string ComplexNumber::toCartesianString() const{

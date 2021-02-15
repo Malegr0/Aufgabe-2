@@ -12,6 +12,11 @@ public:
 		s_numberOfInstances++;
 	}
 
+	//copy constructor
+	ComplexNumber(const ComplexNumber &cn) : m_initialInputType(cn.m_initialInputType), m_valueA(cn.m_valueA), m_valueB(cn.m_valueB) {
+		s_numberOfInstances++;
+	}
+
 	~ComplexNumber() {
 		s_numberOfInstances--;
 	}
@@ -49,6 +54,10 @@ public:
 	void setPolarValues(float valueA, float valueB) {
 		setValueA(valueA);
 		setValueB(valueB);
-		setInitialInputType('c');
+		setInitialInputType('p');
+	}
+
+	static int getNumbersOfInstances() {
+		return s_numberOfInstances;
 	}
 };
