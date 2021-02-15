@@ -4,17 +4,17 @@
 #include <cmath>
 #include "ComplexNumber.h"
 
-ComplexNumbers::ComplexNumbers(char inputType, float valueA, float valueB) {
+ComplexNumber::ComplexNumber(char inputType, float valueA, float valueB) {
 	this->initialInputType = inputType;
 	this->valueA = valueA;
 	this->valueB = valueB;
 }
 
-float ComplexNumbers::calculateAbsoluteAmountWithCoord(float real, float imag) {
+float ComplexNumber::calculateAbsoluteAmountWithCoord(float real, float imag) {
 	return std::sqrt(real * real + imag * imag);
 }
 
-float ComplexNumbers::calculateAngleWithCoord(float real, float imag, float absoluteAmount) {
+float ComplexNumber::calculateAngleWithCoord(float real, float imag, float absoluteAmount) {
 	if (imag >= 0) {
 		return std::acos(real / absoluteAmount);
 	} else {
@@ -22,10 +22,10 @@ float ComplexNumbers::calculateAngleWithCoord(float real, float imag, float abso
 	}
 }
 
-float ComplexNumbers::calculateImagWithPolar(float absoluteAmount, float angle) {
+float ComplexNumber::calculateImagWithPolar(float absoluteAmount, float angle) {
 	return absoluteAmount * std::cos(angle);
 }
 
-float ComplexNumbers::calculateRealWithPolar(float absoluteAmount, float angle) {
+float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) {
 	return absoluteAmount * std::sin(angle);
 }

@@ -1,13 +1,13 @@
 #pragma once
 
-class ComplexNumbers {
+class ComplexNumber {
 private:
 	char initialInputType;
 	float valueA;	//if type is coord then this value stands for real, if type is polar then this value stands for absoluteValue
 	float valueB;	//if type is coord then this value stands for imag, if type is polar then this value stands for angle
 
 public:
-	ComplexNumbers(char inputType, float valueA, float valueB);
+	ComplexNumber(char inputType, float valueA, float valueB);
 
 	float calculateAbsoluteAmountWithCoord(float valueA, float imag);
 
