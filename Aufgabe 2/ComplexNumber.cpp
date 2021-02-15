@@ -5,13 +5,9 @@
 #include "ComplexNumber.h"
 
 ComplexNumbers::ComplexNumbers(char inputType, float valueA, float valueB) {
-	if (inputType == 'p') {
-
-	}
-	else if (inputType == 'k') {
-
-	}
-
+	this->initialInputType = inputType;
+	this->valueA = valueA;
+	this->valueB = valueB;
 }
 
 float ComplexNumbers::calculateAbsoluteAmountWithCoord(float real, float imag) {
