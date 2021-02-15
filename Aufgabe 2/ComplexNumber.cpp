@@ -29,3 +29,11 @@ float ComplexNumber::calculateImagWithPolar(float absoluteAmount, float angle) {
 float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) {
 	return absoluteAmount * std::sin(angle);
 }
+
+std::string ComplexNumber::toCartesianString() {
+	
+}
+
+std::string ComplexNumber::toPolarString() {
+
+}
