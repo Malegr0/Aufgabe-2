@@ -11,11 +11,11 @@ ComplexNumber::ComplexNumber(char inputType, float valueA, float valueB) {
 	this->valueB = valueB;
 }
 
-float ComplexNumber::calculateAbsoluteAmountWithCoord(float real, float imag) {
+float ComplexNumber::calculateAbsoluteAmountWithCart(float real, float imag) {
 	return std::sqrt(real * real + imag * imag);
 }
 
-float ComplexNumber::calculateAngleWithCoord(float real, float imag, float absoluteAmount) {
+float ComplexNumber::calculateAngleWithCart(float real, float imag, float absoluteAmount) {
 	if (imag >= 0) {
 		return std::acos(real / absoluteAmount);
 	} else {
@@ -49,6 +49,6 @@ std::string ComplexNumber::toPolarString() {
 	}
 	else {
 		//if not in polar form then calculate values for output
-		return "z = " + std::to_string(calculateAbsoluteAmountWithCoord(valueA, valueB)) + " * e^( " + std::to_string(calculateAngleWithCoord(valueA, valueB, calculateAbsoluteAmountWithCoord(valueA, valueB))) + "i)";
+		return "z = " + std::to_string(calculateAbsoluteAmountWithCart(valueA, valueB)) + " * e^( " + std::to_string(calculateAngleWithCart(valueA, valueB, calculateAbsoluteAmountWithCart(valueA, valueB))) + "i)";
 	}
 }
