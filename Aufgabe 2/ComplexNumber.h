@@ -9,17 +9,17 @@ private:
 public:
 	ComplexNumber(char inputType, float valueA, float valueB) : m_initialInputType(inputType), m_valueA(valueA), m_valueB(valueB) {}
 
-	float calculateAbsoluteAmountWithCart(float real, float imag);
+	float calculateAbsoluteAmountWithCart(float real, float imag) const;
 
-	float calculateAngleWithCart(float real, float imag, float absoluteAmount);
+	float calculateAngleWithCart(float real, float imag, float absoluteAmount) const;
 
-	float calculateImagWithPolar(float absoluteAmount, float angle);
+	float calculateImagWithPolar(float absoluteAmount, float angle) const;
 
-	float calculateRealWithPolar(float absoluteAmount, float angle);
+	float calculateRealWithPolar(float absoluteAmount, float angle) const;
 
-	std::string toCartesianString();
+	std::string toCartesianString() const;
 
-	std::string toPolarString();
+	std::string toPolarString() const;
 
 	void setValueA(float valueA) {
 		this->m_valueA = valueA;

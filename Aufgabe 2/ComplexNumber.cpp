@@ -6,11 +6,11 @@
 #include "ComplexNumber.h"
 
 
-float ComplexNumber::calculateAbsoluteAmountWithCart(float real, float imag) {
+float ComplexNumber::calculateAbsoluteAmountWithCart(float real, float imag) const {
 	return std::sqrt(real * real + imag * imag);
 }
 
-float ComplexNumber::calculateAngleWithCart(float real, float imag, float absoluteAmount) {
+float ComplexNumber::calculateAngleWithCart(float real, float imag, float absoluteAmount) const {
 	if (imag >= 0) {
 		return std::acos(real / absoluteAmount);
 	} else {
@@ -18,15 +18,15 @@ float ComplexNumber::calculateAngleWithCart(float real, float imag, float absolu
 	}
 }
 
-float ComplexNumber::calculateImagWithPolar(float absoluteAmount, float angle) {
+float ComplexNumber::calculateImagWithPolar(float absoluteAmount, float angle) const {
 	return absoluteAmount * std::cos(angle);
 }
 
-float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) {
+float ComplexNumber::calculateRealWithPolar(float absoluteAmount, float angle) const {
 	return absoluteAmount * std::sin(angle);
 }
 
-std::string ComplexNumber::toCartesianString() {
+std::string ComplexNumber::toCartesianString() const{
 	if (m_initialInputType == 'c') {
 		//if already in cartesian form then just output both variables
 		return "z = " + std::to_string(m_valueA) + " + " + std::to_string(m_valueB) + "i";
@@ -37,7 +37,7 @@ std::string ComplexNumber::toCartesianString() {
 	}
 }
 
-std::string ComplexNumber::toPolarString() {
+std::string ComplexNumber::toPolarString() const {
 	if (m_initialInputType == 'p') {
 		//if already in polar form then just output both variables
 		return "z = " + std::to_string(m_valueA) + " *e^( " + std::to_string(m_valueB) + "i)";
