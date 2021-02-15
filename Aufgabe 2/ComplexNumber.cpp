@@ -5,6 +5,7 @@
 #include <string>
 #include "ComplexNumber.h"
 
+int ComplexNumber::s_numberOfInstances = 0;
 
 float ComplexNumber::calculateAbsoluteAmountWithCart(float real, float imag) const {
 	return std::sqrt(real * real + imag * imag);

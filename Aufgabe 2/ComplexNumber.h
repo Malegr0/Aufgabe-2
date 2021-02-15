@@ -5,9 +5,16 @@ private:
 	char m_initialInputType;	//has to be 'c' or 'p' for coord/cartesian or polar
 	float m_valueA;	//if type is cartesian then this value stands for real, if type is polar then this value stands for absoluteValue
 	float m_valueB;	//if type is cartesian then this value stands for imag, if type is polar then this value stands for angle
+	static int s_numberOfInstances;
 
 public:
-	ComplexNumber(char inputType, float valueA, float valueB) : m_initialInputType(inputType), m_valueA(valueA), m_valueB(valueB) {}
+	ComplexNumber(char inputType, float valueA, float valueB) : m_initialInputType(inputType), m_valueA(valueA), m_valueB(valueB) {
+		s_numberOfInstances++;
+	}
+
+	~ComplexNumber() {
+		s_numberOfInstances--;
+	}
 
 	float calculateAbsoluteAmountWithCart(float real, float imag) const;
 
